@@ -1,11 +1,8 @@
 # YouTube Comment Sentiment Analysis Dashboard
 
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+※このリポジトリはGeminiが作成しました。
 
 特定のYouTube動画のコメントを取得し、日本語の感情分析（ポジティブ/ネガティブ）を行い、結果を円グラフで可視化するシンプルなWebアプリケーションです。
-
-データ分析やWebアプリケーション開発の初学者向けのサンプルプロジェクトとして作成しました。
 
 ![Dashboard Screenshot](https://user-images.githubusercontent.com/10/222333444-c689304a-4428-4f27-8e6d-9c3f46f22200.png)
 *(ここに完成したアプリケーションのスクリーンショットを挿入してください)*
@@ -55,16 +52,14 @@
         ```
     -   macOS / Linuxの場合:
         ```sh
-        python3 -m venv venv
+        python -m venv venv
         source venv/bin/activate
         ```
 
 3.  **必要なライブラリをインストール**
     ```sh
-    pip install -r requirements.txt
+    pip install Flask google-api-python-client google-auth-httplib2 google-auth-oauthlib matplotlib janome
     ```
-    > **💡 `requirements.txt`について**
-    > このプロジェクトで使われているPythonライブラリの一覧です。上記のコマンドで、必要なライブラリがすべて一括でインストールされます。
 
 ### 3. APIキーの設定
 
@@ -74,22 +69,13 @@
 2.  「APIとサービス」 > 「ライブラリ」から **"YouTube Data API v3"** を検索し、有効化します。
 3.  「APIとサービス」 > 「認証情報」から「+ 認証情報を作成」をクリックし、「APIキー」を選択します。
 4.  発行されたAPIキーをコピーします。
-5.  プロジェクトのルートディレクトリ（`app.py`と同じ階層）に `api_key.txt` という名前のファイルを作成します。
+5.  プロジェクトのルートディレクトリ（`app.py`と同じ階層）の`api_key_example.txt` という名前のファイルを `api_key.txt` へリネームします。
 6.  `api_key.txt` の中に、コピーしたAPIキーの文字列**だけ**を貼り付けて保存します。
 
     **`api_key.txt` の中身の例:**
     ```txt
     AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     ```
-
-    > **⚠️ セキュリティ上の注意**
-    > `api_key.txt` は、絶対にGitの管理に含めないでください。プロジェクトのルートディレクトリにある`.gitignore`ファイルに `api_key.txt` と記載することで、誤ってAPIキーを公開してしまう事故を防げます。
-    > ```.gitignore
-    > # ... other settings ...
-    >
-    > # API Key
-    > api_key.txt
-    > ```
 
 ### 4. アプリケーションの実行
 

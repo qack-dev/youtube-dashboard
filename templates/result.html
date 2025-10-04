@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>分析結果</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        .container { margin: 20px auto; width: 80%; }
+        img { max-width: 600px; margin-top: 20px; }
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>分析結果</h1>
+        <p>対象動画URL: <a href="{{ video_url }}" target="_blank">{{ video_url }}</a></p>
+        <ul>
+            <li>総コメント数: {{ total_comments }}</li>
+            <li>ポジティブ: {{ results.ポジティブ | default(0) }}件</li>
+            <li>ネガティブ: {{ results.ネガティブ | default(0) }}件</li>
+            <li>ニュートラル: {{ results.ニュートラル | default(0) }}件</li>
+        </ul>
+        {% if chart_image %}
+        <img src="{{ url_for('static', filename=chart_image) }}" alt="感情分析結果グラフ">
+        {% else %}
+        <p>グラフの生成に失敗しました。</p>
+        {% endif %}
+        <br><br>
+        <a href="/">別の動画を分析する</a>
+    </div>
+</body>
+</html>

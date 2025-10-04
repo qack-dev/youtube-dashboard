@@ -4,8 +4,9 @@
 
 特定のYouTube動画のコメントを取得し、日本語の感情分析（ポジティブ/ネガティブ）を行い、結果を円グラフで可視化するシンプルなWebアプリケーションです。
 
-![Dashboard Screenshot](https://user-images.githubusercontent.com/10/222333444-c689304a-4428-4f27-8e6d-9c3f46f22200.png)
-*(ここに完成したアプリケーションのスクリーンショットを挿入してください)*
+![Dashboard Screenshot](https://github.com/user-attachments/assets/e2245509-de48-4724-b2d5-3e57ee0c0920)
+
+![Dashboard Screenshot2](https://github.com/user-attachments/assets/0d65969b-8537-479b-a6ad-00c7fff34d36)
 
 ---
 

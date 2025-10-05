@@ -41,7 +41,7 @@
 
 1.  **リポジトリをクローン**
     ```sh
-    git clone https://github.com/あなたのユーザー名/youtube-dashboard.git
+    git clone https://github.com/qack-dev/youtube-dashboard.git
     cd youtube-dashboard
     ```
 
